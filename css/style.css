@@ -29,6 +29,7 @@ ul {
     padding-right: 15px;
 }
 
+
 .landing {
     background-image: url('../images/landing1.jpg');
     background-size: cover;
@@ -48,6 +49,40 @@ ul {
     font-weight: bold;
     color: #ecddc8;
 }
+
+/* Small */
+@media (max-width: 767px) {
+    /* .landing .container .header {
+        display: table-column  
+    } */
+
+    .landing .container .header {
+        flex-wrap: wrap;
+    }
+
+    .landing .container .header .logo {
+        width: 100%;
+        text-align: center;
+        /* display: block; */
+    }
+
+    .landing .container .header .links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .landing .container .header .links a {
+        padding: 0 5px;
+        height: 20px;
+
+    }
+
+    .landing .container .infos {
+        display: none;
+    }
+}
+
+
 
 .landing .container .header .links {
     display: flex;
@@ -378,17 +413,17 @@ i {
     height: 85vh;
     background-size: cover;
     background-position: center;
-    /* background-repeat: no-repeat; */
     position: relative;
+    display: flex;
+    justify-content: end;
+    align-items: center;
 }
 
 .contact .card {
-    position: absolute;
+    /* position: absolute; */
+    width: 30%;
     width: 30%;
     height: 70%;
-    /* background-color: cadetblue; */
-    left: 67%;
-    top: 16%;
     border: 2px solid white;
     display: flex;
     flex-direction: column;
@@ -397,11 +432,11 @@ i {
 }
 
 .contact .card input {
-    max-width: 412.55px;
-    min-width: 412.55px;
+    /* max-width: 412.55px;
+    min-width: 412.55px; */
+    width: 90%;
     height: 10%;
     margin: 20px;
-    height: 10%;
     padding: 20px;
     margin: 20px;
     background-color: transparent;
@@ -411,8 +446,9 @@ i {
 }
 
 .contact .card textarea {
-    max-width: 412.55px;
-    min-width: 412.55px;
+    /* max-width: 412.55px;
+    min-width: 412.55px; */
+    width: 90%;
     max-height: 35%;
     min-height: 35%;
     margin: 20px;
@@ -459,7 +495,7 @@ textarea:focus {
 
 .contact .media {
     position: absolute;
-    left: 75%;
+    right: 10%;
     bottom: 2%;
 }
 
@@ -471,4 +507,46 @@ textarea:focus {
 
 .contact .media span {
     padding: 10px;
+}
+
+@media (max-width: 767px) {
+    .transport .container {
+        gap: 100px;
+    }
+
+    .contact {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact .media a img {
+        width: 30px;
+    }
+}
+
+@media (max-width: 950px) {
+    .contact {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact .card {
+        width: 50%;
+        width: 50%;
+        height: 70%;
+    }
+
+    .contact .card input,
+    .contact .card textarea {
+        background-color: #fffae4bd;
+    }
+
+    .contact .media {
+        position: absolute;
+        left: 50%;
+        bottom: 2%;
+        transform: translateX(-50%);
+    }
 }
